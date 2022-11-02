@@ -12,6 +12,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         latexmk \
         make \
         poppler-utils \
+        python3-pygments \
         texlive-bibtex-extra \
         texlive-extra-utils \
         texlive-font-utils \
