@@ -1,7 +1,7 @@
 REGISTRY := ghcr.io
 OWNER := giacomolanciano
 NAME := devcontainer-latex
-TAG := $(shell cat VERSION.txt)
+TAG := $(shell git describe --tags --always)
 
 .PHONY: build push info
 
