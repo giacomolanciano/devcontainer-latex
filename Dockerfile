@@ -25,5 +25,13 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         xzdec \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Microsoft fonts
+RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections \
+    && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+        ttf-mscorefonts-installer \
+    && rm -rf /var/lib/apt/lists/* \
+    && fc-cache -vr
+
 # Install 'latexindent' Perl dependencies
 RUN cpanm -fi Log::Dispatch::File YAML::Tiny File::HomeDir
