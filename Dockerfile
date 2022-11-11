@@ -25,12 +25,26 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         xzdec \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Microsoft fonts
+# Install additional fonts
+## Microsoft
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections \
     && apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
         ttf-mscorefonts-installer \
     && rm -rf /var/lib/apt/lists/* \
+    && fc-cache -vr
+
+## Dependencies for 'auriga' (beamer) & 'gemini' (beamerposter) themes. See:
+## - https://github.com/anishathalye/auriga
+## - https://github.com/anishathalye/gemini
+RUN cd /usr/share/fonts/truetype \
+    && \
+        for font in hack lato raleway; do \
+            mkdir ${font}; \
+            wget -O ${font}.zip https://www.fontsquirrel.com/fonts/download/${font}; \
+            unzip -n -d ${font} ${font}.zip; \
+            rm ${font}.zip; \
+        done \
     && fc-cache -vr
 
 # Install 'latexindent' Perl dependencies
