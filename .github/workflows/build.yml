@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - 'master'
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
@@ -20,6 +21,11 @@ jobs:
       packages: write
 
     steps:
+      - name: Set IMAGE_NAME to 'unstable' version
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "IMAGE_NAME=${{ github.repository }}-unstable" >> $GITHUB_ENV
+
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
 
