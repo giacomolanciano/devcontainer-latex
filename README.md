@@ -1,14 +1,22 @@
 # devcontainer-latex
 
-A comprehensive [devcontainer](https://containers.dev/) base image for academic paper writing with LaTeX.
+A comprehensive [devcontainer](https://containers.dev/) base image for academic paper and presentation writing with
+LaTeX.
 
 ## Usage
 
-Add a reference to this image in your `devcontainer.json`:
+Use it as a base image for your own `Dockerfile`:
+
+```Dockerfile
+FROM ghcr.io/giacomolanciano/devcontainer-latex:<VERSION>
+...
+```
+
+In alternative, add a reference to this image directly in your `devcontainer.json`:
 
 ```json
 {
-  "image": "ghcr.io/giacomolanciano/devcontainer-latex",
+  "image": "ghcr.io/giacomolanciano/devcontainer-latex:<VERSION>",
   ...
 }
 ```
