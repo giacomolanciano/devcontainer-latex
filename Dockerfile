@@ -9,6 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         bibtool \
         cpanminus \
         fontconfig \
+        ghostscript \
         latexmk \
         make \
         poppler-utils \
