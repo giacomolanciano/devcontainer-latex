@@ -10,6 +10,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         cpanminus \
         fontconfig \
         ghostscript \
+        latexdiff \
         latexmk \
         make \
         poppler-utils \
