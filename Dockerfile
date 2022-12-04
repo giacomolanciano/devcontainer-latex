@@ -14,6 +14,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         latexmk \
         make \
         poppler-utils \
+        python-is-python3 \
+        python3-pip \
         python3-pygments \
         texlive-bibtex-extra \
         texlive-extra-utils \
@@ -26,6 +28,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         texlive-science \
         xzdec \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install arxiv-latex-cleaner
 
 # Install additional fonts
 ## Microsoft
