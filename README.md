@@ -39,6 +39,12 @@ There are multiple alternative ways to use this image:
         bash
     ```
 
+Check [`latex-paper-template`](https://github.com/giacomolanciano/latex-paper-template) to see a usage example.
+
+## Acknowledgments
+
+This project is maintained by [Giacomo Lanciano](https://github.com/giacomolanciano).
+
 ## License
 
 Distributed under the [MIT License](LICENSE).
