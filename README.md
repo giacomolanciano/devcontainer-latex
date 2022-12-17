@@ -39,11 +39,11 @@ There are multiple alternative ways to use this image:
         bash
     ```
 
-Check [`latex-paper-template`](https://github.com/giacomolanciano/latex-paper-template) to see a usage example.
+Check [**PaperOps**](https://github.com/giacomolanciano/paperops) to see a usage example.
 
 ## Acknowledgments
 
-This project is maintained by [Giacomo Lanciano](https://github.com/giacomolanciano).
+Maintained by [Giacomo Lanciano](https://github.com/giacomolanciano).
 
 ## License
 
