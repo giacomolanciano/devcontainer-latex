@@ -13,6 +13,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         latexdiff \
         latexmk \
         make \
+        pdftk \
         poppler-utils \
         python-is-python3 \
         python3-pip \
